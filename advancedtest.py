@@ -8,7 +8,7 @@ import os
 # Load environment variables from .env file (for local development)
 load_dotenv(override=True)
 
-google_api_key = os.getenv('google_api_key')
+google_api_key = st.secrets.get("google_api_key")
 
 # Page configuration
 st.set_page_config(
